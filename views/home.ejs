@@ -1,15 +1,58 @@
 <html>
     <head>
+        <!--issue2 what can be the diffrence here if i put locals.title-->
         <title>
             <%= title%>
         </title>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-        <link rel="stylesheet" href="../assets/css/home.css">
+        <!--issue 3 not working on this link both the files are not linked when i try this link ../assets/css/home.css--
+        but working absolutely fine on this link /css/home.css-->
+        <link rel="stylesheet" href="/css/home.css">
     </head>
     <body>
-        
 
-        
+        <!--main container containing the todo app-->
+
+       <div id="Main-container-div">
+           <!--main heading-->
+           <h1 id="Main-heading">TODO APP</h1>
+
+           <!--main form is started from here-->
+           <form action="" method="POST">
+
+               <!--<label for="description">DESCRIPTION</label>
+               <input  type="text" name="description" placeholder="what do you need to do" id="description" required>-->
+               
+               <!--now there are three div containg three features of the forms description work and day -->
+
+               <div id="activity">
+                   <p class="description">DESCRIPTION</p>
+                   <textarea name="description" rows="2" cols="100" placeholder="What to do you need to do" required></textarea>
+               </div>
+
+               <div id="date-and-work">
+                   <!--div containing the list-->
+                   <div id="work">
+                       <p>Choose a catageory</p>
+                        <select name="" id="">
+                            <option>Personal</option>
+                            <option>School</option>
+                             <option>Work</option>
+                             <option>Cleaning</option>
+                             <option>Other</option>
+                        </select>
+                    </div>
+
+                    <!--div containing the day-->
+                    <div id="date">
+                       <p>Dual Date</p>
+                       <input type="date" name="dual-date">
+                    </div>
+               </div>
+            
+           </form>
+           <!--form is finished here for the three basics inputs-->
+       </div>
         <script type="text/javascript" src="../assets/js/home.js"></script>
     </body>
 </html>

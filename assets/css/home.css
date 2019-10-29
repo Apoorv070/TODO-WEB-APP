@@ -1,0 +1,59 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#activity{
+    border: #738296 solid 1px;
+}
+
+.description{
+    color: #738296 ;
+}
+
+#Main-container-div{
+    max-width: 60vw;
+    max-height: 60vh;
+    border: blue solid 1px;
+
+}
+
+#Main-heading{
+   color: #738296 ;
+   text-align: center;
+   font-family: cursive;
+     
+}
+
+#date-and-work{
+    display: flex;
+}
+
+#work{
+  width: 50% ;
+  height: 100px;
+  border: #738296 solid 1px;
+  padding: 10px;
+}
+
+#date{
+
+    width: 50% ;
+    height: 100px;
+    border: #738296 solid 1px;
+    padding: 10px;
+}
+/*issue 4 why this code is not working*/
+/*#date-and-work > div{
+    display: inline-block;
+}*/
+
+#work p{
+    color: #738296 ;
+}
+
+#date p{
+    color: #738296 ;
+}
+
