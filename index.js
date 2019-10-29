@@ -6,6 +6,7 @@ const port = 8000;
 
 //setting the connection with mongoose
 const db = require('./config/mongoose');
+const Work = require('./models/work');
 
 const app = express();
 
