@@ -4,7 +4,7 @@ const workschema = new mongoose.Schema({
            type : String,
            required : true
     },
-    catagoery : {
+    category: {
 
         type :String,
         required : true

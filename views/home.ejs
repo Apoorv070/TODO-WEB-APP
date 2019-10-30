@@ -2,7 +2,7 @@
     <head>
         <!--issue2 what can be the diffrence here if i put locals.title-->
         <title>
-            <%= title%>
+            <%= locals.title%>
         </title>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
         <!--issue 3 not working on this link both the files are not linked when i try this link ../assets/css/home.css--
@@ -18,7 +18,7 @@
            <h1 id="Main-heading">TODO APP</h1>
 
            <!--main form is started from here-->
-           <form action="" method="POST">
+           <form action="/addtask" method="POST">
 
                <!--<label for="description">DESCRIPTION</label>
                <input  type="text" name="description" placeholder="what do you need to do" id="description" required>-->
@@ -27,6 +27,7 @@
 
                <div id="activity">
                    <p class="description">DESCRIPTION</p>
+                   <!--issue 5 how to make it more flexible-->
                    <textarea name="description" rows="2" cols="100" placeholder="What to do you need to do" required></textarea>
                </div>
 
@@ -34,7 +35,7 @@
                    <!--div containing the list-->
                    <div id="work">
                        <p>Choose a catageory</p>
-                        <select name="" id="">
+                        <select name="category" id="">
                             <option>Personal</option>
                             <option>School</option>
                              <option>Work</option>
@@ -46,12 +47,46 @@
                     <!--div containing the day-->
                     <div id="date">
                        <p>Dual Date</p>
-                       <input type="date" name="dual-date">
+                       <input type="date" name="date">
                     </div>
+               </div>
+
+               <div class="add-del-button">
+                   <button type="submit" class="add-button"><spam class="add-del-spam"><i class="fas fa-plus"></i></spam><spam class="add-del-spam" >ADD TASK</spam></button>
+                   <button type="submit" class="del-button"   ><spam class="add-del-spam"><i class="fas fa-trash-alt"></i></spam><spam class="add-del-spam">DELETE TASKS</spam></button>
                </div>
             
            </form>
+
+           <!--My tasks -->
+
+
+           <ul id="list-for-tasks">
+               <%for(let i of task){%>
+                
+                 <li>
+                    <div id="container-of-list">
+                       <div class="checkboxdiv">
+                           <input type="radio">
+                       </div>
+
+                       <div class="descriptiondiv">
+                           <p><%=i.description %></p>
+                           <i class="far fa-calendar-alt"></i><spam class="description-spam"><%=i.date %></spam>
+                       </div>
+
+                       <div class="categorydiv">
+                           <p class="cateogiryname"> <%=i.category %> </p>
+                       </div>
+                    
+                    </div>
+                </li>   
+               <%}%>
+           </ul>
+
+
            <!--form is finished here for the three basics inputs-->
+          
        </div>
         <script type="text/javascript" src="../assets/js/home.js"></script>
     </body>

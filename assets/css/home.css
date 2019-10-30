@@ -13,9 +13,10 @@ body{
 }
 
 #Main-container-div{
-    max-width: 60vw;
-    max-height: 60vh;
+    width: 60vw;
+    height: auto;
     border: blue solid 1px;
+    padding: 0px;
 
 }
 
@@ -57,3 +58,88 @@ body{
     color: #738296 ;
 }
 
+.add-del-button{
+     height: 50px;
+    border: blue solid 1px;
+    display: flex;
+    justify-content: center;
+   
+   
+}
+
+.add-button{
+    background-color:  #454345;
+    color: white;
+    height: 40px;
+    margin: 5px;
+   
+}
+
+.del-button{
+
+    background-color:  #EE351E;
+    color: white;
+    height: 40px;
+    margin: 5px;
+   
+
+}
+
+.add-del-spam{
+    margin: 0px 2px ;
+}
+
+/*list of My Task*/
+#list-for-tasks{
+    list-style: none;
+    padding: 0px;
+    
+}
+
+#container-of-list{
+    width: 100%;
+    border-top:#738296  solid 1px ;
+    border-bottom :#738296  solid 1px ;
+    margin: 0px;
+    display: flex;
+}
+
+.checkboxdiv{
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+}
+
+.descriptiondiv{
+    padding: 0px 5px ;
+    width: 70%;
+    color: #738296;
+}
+
+.categorydiv{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.cateogiryname{
+    width: 40%;
+    height: 30px;
+    padding: 5px 0px;
+    text-align: center;
+    color : white;
+    background-color: #F2A700;
+    border-radius: 5%;
+
+}
+
+.description-spam{
+
+    margin: 1.5px 5px;
+}

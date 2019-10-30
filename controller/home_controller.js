@@ -1,5 +1,13 @@
+const Work = require('../models/work') ;
+
 module.exports.firstpage = function(req,res){
-    return res.render('home',{//issue 1 fail to find the home directory
-        title:'Todoapp'
-    });
+
+    Work.find({},function (err,data) {
+
+        return res.render('home',{
+            title:'Todoapp',
+            task:data
+        });        
+    })
+
 };
