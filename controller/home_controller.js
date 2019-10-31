@@ -6,7 +6,7 @@ module.exports.firstpage = function(req,res){
 
         return res.render('home',{
             title:'Todoapp',
-            task:data
+            task : data
         });        
     })
 

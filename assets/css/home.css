@@ -15,7 +15,7 @@ body{
 #Main-container-div{
     width: 60vw;
     height: auto;
-    border: blue solid 1px;
+    border:#738296 solid 1px;
     padding: 0px;
 
 }
@@ -25,6 +25,10 @@ body{
    text-align: center;
    font-family: cursive;
      
+}
+
+.textareaclass-activity{
+    width: 100%;
 }
 
 #date-and-work{
@@ -38,12 +42,28 @@ body{
   padding: 10px;
 }
 
+#work:hover{
+    width: 50% ;
+    height: 100px;
+    border: #a6afbb solid 1px;
+    padding: 10px;
+    background-color: #a6afbb;
+  }
+  
 #date{
 
     width: 50% ;
     height: 100px;
     border: #738296 solid 1px;
     padding: 10px;
+}
+#date:hover{
+
+    width: 50% ;
+    height: 100px;
+    border: #a6afbb solid 1px;
+    padding: 10px;
+    background-color: #a6afbb;
 }
 /*issue 4 why this code is not working*/
 /*#date-and-work > div{
@@ -60,7 +80,7 @@ body{
 
 .add-del-button{
      height: 50px;
-    border: blue solid 1px;
+    border-top:#738296 solid 1px;
     display: flex;
     justify-content: center;
    

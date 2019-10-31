@@ -8,6 +8,7 @@
         <!--issue 3 not working on this link both the files are not linked when i try this link ../assets/css/home.css--
         but working absolutely fine on this link /css/home.css-->
         <link rel="stylesheet" href="/css/home.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
     </head>
     <body>
 
@@ -28,7 +29,7 @@
                <div id="activity">
                    <p class="description">DESCRIPTION</p>
                    <!--issue 5 how to make it more flexible-->
-                   <textarea name="description" rows="2" cols="100" placeholder="What to do you need to do" required></textarea>
+                   <textarea class="textareaclass-activity" name="description"  placeholder="What to do you need to do" required></textarea>
                </div>
 
                <div id="date-and-work">
@@ -47,14 +48,19 @@
                     <!--div containing the day-->
                     <div id="date">
                        <p>Dual Date</p>
-                       <input type="date" name="date">
+                       <!-- <input type="date" name="date"> -->
+                       <input type="text" name="date" id="datepicker">
                     </div>
                </div>
 
                <div class="add-del-button">
                    <button type="submit" class="add-button"><spam class="add-del-spam"><i class="fas fa-plus"></i></spam><spam class="add-del-spam" >ADD TASK</spam></button>
-                   <button type="submit" class="del-button"   ><spam class="add-del-spam"><i class="fas fa-trash-alt"></i></spam><spam class="add-del-spam">DELETE TASKS</spam></button>
+                   <button type="submit" class="del-button"  form="delete-form" ><spam class="add-del-spam"><i class="fas fa-trash-alt"></i></spam><spam class="add-del-spam">DELETE TASKS</spam></button>
                </div>
+            
+           </form>
+           <form action="/delete-contact" method="POST" id="delete-form">
+              
             
            </form>
 
@@ -67,16 +73,16 @@
                  <li>
                     <div id="container-of-list">
                        <div class="checkboxdiv">
-                           <input type="radio">
+                           <input type="checkbox" value="<%= i._id %>" form="delete-form"  name="deleteIds" >
                        </div>
 
                        <div class="descriptiondiv">
                            <p><%=i.description %></p>
-                           <i class="far fa-calendar-alt"></i><spam class="description-spam"><%=i.date %></spam>
+                           <i class="far fa-calendar-alt"></i><spam class="description-spam"><spam id="demo"><%=i.date %></spam>
                        </div>
 
                        <div class="categorydiv">
-                           <p class="cateogiryname"> <%=i.category %> </p>
+                           <p class="cateogiryname <%= i.category %>"> <%=i.category %> </p>
                        </div>
                     
                     </div>
@@ -88,6 +94,16 @@
            <!--form is finished here for the three basics inputs-->
           
        </div>
+       <!-- <script src="https://code.jquery.com/jquery-3.4.1.js"></script> -->
+       <script
+       src="https://code.jquery.com/jquery-3.4.1.min.js"
+       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+       crossorigin="anonymous"></script>
+
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+       <script>
+           $("#datepicker").datepicker({ dateFormat:'M-dd-yy' });
+       </script>
         <script type="text/javascript" src="../assets/js/home.js"></script>
     </body>
 </html>
