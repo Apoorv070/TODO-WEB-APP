@@ -1,13 +1,14 @@
 <html>
     <head>
-        <!--issue2 what can be the diffrence here if i put locals.title-->
+        
         <title>
             <%= locals.title%>
         </title>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-        <!--issue 3 not working on this link both the files are not linked when i try this link ../assets/css/home.css--
-        but working absolutely fine on this link /css/home.css-->
-        <link rel="stylesheet" href="/css/home.css">
+        <!--link to include the fontawesome-->
+           <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <!--link to include the css files--> 
+           <link rel="stylesheet" href="/css/home.css">
+        <!--link to include the jquery libraries-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
     </head>
     <body>
@@ -20,18 +21,17 @@
 
            <!--main form is started from here-->
            <form action="/addtask" method="POST">
-
-               <!--<label for="description">DESCRIPTION</label>
-               <input  type="text" name="description" placeholder="what do you need to do" id="description" required>-->
                
                <!--now there are three div containg three features of the forms description work and day -->
-
+ 
+               <!--div containing all the description area-->
                <div id="activity">
                    <p class="description">DESCRIPTION</p>
-                   <!--issue 5 how to make it more flexible-->
                    <textarea class="textareaclass-activity" name="description"  placeholder="What to do you need to do" required></textarea>
                </div>
 
+
+               <!--div containing all the date and work-->
                <div id="date-and-work">
                    <!--div containing the list-->
                    <div id="work">
@@ -53,12 +53,16 @@
                     </div>
                </div>
 
+
+               <!--div containing the add and delete buttons for the tasks-->
                <div class="add-del-button">
                    <button type="submit" class="add-button"><spam class="add-del-spam"><i class="fas fa-plus"></i></spam><spam class="add-del-spam" >ADD TASK</spam></button>
                    <button type="submit" class="del-button"  form="delete-form" ><spam class="add-del-spam"><i class="fas fa-trash-alt"></i></spam><spam class="add-del-spam">DELETE TASKS</spam></button>
                </div>
             
            </form>
+
+           <!--this is the second form which is linked with the delete button-->
            <form action="/delete-contact" method="POST" id="delete-form">
               
             
@@ -66,23 +70,28 @@
 
            <!--My tasks -->
 
-
+           <!--this my list containing all the tasks-->
            <ul id="list-for-tasks">
                <%for(let i of task){%>
                 
                  <li>
+                     <!--this is my div containing all the items for a particular task-->
                     <div id="container-of-list">
+
+                        <!--this div is containing checkbox linked with delete button-->
                        <div class="checkboxdiv">
                            <input type="checkbox" value="<%= i._id %>" form="delete-form"  name="deleteIds" >
                        </div>
-
+                       
+                       <!--this div is containing description and date-->
                        <div class="descriptiondiv">
                            <p><%=i.description %></p>
                            <i class="far fa-calendar-alt"></i><spam class="description-spam"><spam id="demo"><%=i.date %></spam>
                        </div>
 
+                       <!--this div is containing category-->
                        <div class="categorydiv">
-                           <p class="cateogiryname <%= i.category %>"> <%=i.category %> </p>
+                           <p class="cateogiryname  <%= i.category %> "> <%=i.category %> </p>
                        </div>
                     
                     </div>
@@ -91,19 +100,22 @@
            </ul>
 
 
-           <!--form is finished here for the three basics inputs-->
+       <!--form is finished here for the three basics inputs-->
           
        </div>
        <!-- <script src="https://code.jquery.com/jquery-3.4.1.js"></script> -->
        <script
-       src="https://code.jquery.com/jquery-3.4.1.min.js"
-       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-       crossorigin="anonymous"></script>
+                src="https://code.jquery.com/jquery-3.4.1.min.js"
+                integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+                crossorigin="anonymous">
+       </script>
 
        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
        <script>
            $("#datepicker").datepicker({ dateFormat:'M-dd-yy' });
        </script>
+
         <script type="text/javascript" src="../assets/js/home.js"></script>
     </body>
-</html>
+    </html>

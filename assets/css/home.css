@@ -1,40 +1,52 @@
+/*Main body*/
 body{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#activity{
-    border: #738296 solid 1px;
-}
 
-.description{
-    color: #738296 ;
-}
-
+/*main container of my to do app*/
 #Main-container-div{
     width: 60vw;
     height: auto;
     border:#738296 solid 1px;
     padding: 0px;
-
 }
 
+/*main heading */
 #Main-heading{
-   color: #738296 ;
-   text-align: center;
-   font-family: cursive;
-     
+    color: #738296 ;
+    text-align: center;
+    font-family: cursive;
+      
+ }
+
+
+/*description div*/
+#activity{
+    border: #738296 solid 1px;
 }
 
+
+/*description box*/
+.description{
+    color: #738296 ;
+}
+
+
+/*description area*/
 .textareaclass-activity{
     width: 100%;
 }
 
+
+/*date and work div*/
 #date-and-work{
     display: flex;
 }
 
+/*work div*/
 #work{
   width: 50% ;
   height: 100px;
@@ -50,6 +62,7 @@ body{
     background-color: #a6afbb;
   }
   
+/*date div*/  
 #date{
 
     width: 50% ;
@@ -57,6 +70,8 @@ body{
     border: #738296 solid 1px;
     padding: 10px;
 }
+
+
 #date:hover{
 
     width: 50% ;
@@ -65,10 +80,7 @@ body{
     padding: 10px;
     background-color: #a6afbb;
 }
-/*issue 4 why this code is not working*/
-/*#date-and-work > div{
-    display: inline-block;
-}*/
+
 
 #work p{
     color: #738296 ;
@@ -78,6 +90,7 @@ body{
     color: #738296 ;
 }
 
+/*styling to my buttons */
 .add-del-button{
      height: 50px;
     border-top:#738296 solid 1px;
@@ -87,6 +100,7 @@ body{
    
 }
 
+
 .add-button{
     background-color:  #454345;
     color: white;
@@ -94,6 +108,7 @@ body{
     margin: 5px;
    
 }
+
 
 .del-button{
 
@@ -105,9 +120,11 @@ body{
 
 }
 
+
 .add-del-spam{
     margin: 0px 2px ;
 }
+
 
 /*list of My Task*/
 #list-for-tasks{
@@ -148,7 +165,8 @@ body{
 
 }
 
-.cateogiryname{
+/*lists of all the categories*/
+.Personal{
     width: 40%;
     height: 30px;
     padding: 5px 0px;
@@ -159,7 +177,51 @@ body{
 
 }
 
-.description-spam{
+.School{
+    width: 40%;
+    height: 30px;
+    padding: 5px 0px;
+    text-align: center;
+    color : white;
+    background-color:purple;
+    border-radius: 5%;
 
-    margin: 1.5px 5px;
 }
+.Work{
+    width: 40%;
+    height: 30px;
+    padding: 5px 0px;
+    text-align: center;
+    color : white;
+    background-color:lightgreen;
+    border-radius: 5%;
+
+}
+
+.Cleaning{
+    width: 40%;
+    height: 30px;
+    padding: 5px 0px;
+    text-align: center;
+    color : white;
+    background-color: lightblue;
+    border-radius: 5%;
+
+}
+
+.Other{
+    width: 40%;
+    height: 30px;
+    padding: 5px 0px;
+    text-align: center;
+    color : white;
+    background-color: pink;
+    border-radius: 5%;
+
+}
+
+.description-spam{
+   margin: 1.5px 5px;
+}
+
+
