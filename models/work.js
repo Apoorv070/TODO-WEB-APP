@@ -18,6 +18,11 @@ const workschema = new mongoose.Schema({
         type :String,
         required : true
 
+    },
+
+    priority : {
+        type : Number,
+        required :true
     }
   });
 

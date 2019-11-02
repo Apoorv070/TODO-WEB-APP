@@ -51,6 +51,22 @@
                        <!-- <input type="date" name="date"> -->
                        <input type="text" name="date" id="datepicker">
                     </div>
+
+                    <div id="priority" >
+                        <p>Choose a Priority</p>
+                        <select name="priority" id="">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                        </select>
+                    </div>
                </div>
 
 
@@ -81,6 +97,11 @@
                         <!--this div is containing checkbox linked with delete button-->
                        <div class="checkboxdiv">
                            <input type="checkbox" value="<%= i._id %>" form="delete-form"  name="deleteIds" >
+                       </div>
+
+
+                       <div class="Prioritydiv">
+                           <h2><%=i.priority%></h2>
                        </div>
                        
                        <!--this div is containing description and date-->
